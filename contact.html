@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FLATICON ===============-->
+    <link rel="stylesheet" href="responsive.css" />
+
+    <!--=============== SWIPER CSS ===============-->
+    <!-- <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" /> -->
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Car Dealer Website</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header" id="header">
+  <nav>
+    <a href="index.html" class="nav_logo">
+      <i class="fa-solid fa-car"></i>
+      CarAutoMAx
+    </a>
+    <div class="nav_menu" id="nav-menu">
+      <ul class="nav_list">
+        <li class="nav_item"><a href="index.html" class="nav_link active-link">Home</a></li>
+        <li class="nav_item"><a href="about.html" class="nav_link">About</a></li>
+        <li class="nav_item"><a href="shop.html" class="nav_link">Shop</a></li>
+        <!-- <li class="nav_item"><a href="cart.html" class="nav_link">Cart</a></li> -->
+        <!-- <li class="nav_item"><a href="blog.html" class="nav_link">Blog</a></li> -->
+        <li class="nav_item"><a href="contact.html" class="nav_link">Contact</a></li>
+
+
+
+         <form class="nav_search" id="nav-search" style="display: flex; align-items: center; margin: 1rem 0 0 0; width: 100%; justify-content: center;">
+        <input type="text" placeholder="Search..." class="search_input" id="search-input" style="padding: 0.5rem 1rem; border-radius: 2rem; border: 1px solid #ccc; outline: none; font-size: 1rem; width: 220px; max-width: 100%;" />
+        <button type="submit" class="search_btn" style="background: none; border: none; margin-left: -2.5rem; cursor: pointer;">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+      </ul>
+
+      <div class="nav_btns">
+        <div class="login_toggle" id="login-toggle">
+          <a href="signup.html" class="nav_link"><i class="fa-solid fa-user-plus"></i></a>
+         
+        </div>
+        <div class="nav_shop" id="cart-shop">
+          <i class="fa-solid fa-basket-shopping"></i>
+        </div>
+      </div>
+     
+      <div class="nav_close" id="nav-close" style="display: none;">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="nav_toggle" id="nav-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+</header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="small-container">
+                <!-- Contact Form -->
+                <div class="form">
+                    <h2 class="text">Send Us a Message</h2>
+                    <form class="form-input-container">
+                        <div class="grid1">
+                            <div>
+                                <label for="first-name" class="block">First Name</label>
+                                <input type="text" id="first-name" class="form-input">
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-gray-700 mb-2">Last Name</label>
+                                <input type="text" id="last-name" class="form-input">
+                            </div>
+                        </div>
+                        <div class="grid1">
+ <div>
+                            <label for="email" class="block">Email Address</label>
+                            <input type="email" id="email" class="form-input">
+                        </div>
+                        <div>
+                            <label for="phone" class="block">Phone Number</label>
+                            <input type="tel" id="phone" class="form-input">
+                        </div>
+                        </div>
+
+                        <div class="grid1">
+                            <div>
+                            <label for="subject" class="block">Subject</label>
+                            <select id="subject" class="form-input1">
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Test Drive Request">Test Drive Request</option>
+                                <option value="Service Appointment">Service Appointment</option>
+                                <option value="Financing Questions">Financing Questions</option>
+                                <option value="Vehicle Inquiry">Vehicle Inquiry</option>
+                            </select>
+                        </div>
+                         <div>
+                            <label for="best-time" class="block">Best Time to Contact</label>
+                            <select id="best-time" class="form-input1">
+                                <option value="Morning (8AM - 12PM)">Morning (8AM - 12PM)</option>
+                                <option value="Afternoon (12PM - 4PM)">Afternoon (12PM - 4PM)</option>
+                                <option value="Evening (4PM - 8PM)">Evening (4PM - 8PM)</option>
+                            </select>
+                        </div>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block" style="display:flex;width: 50%;">Message</label>
+                            <textarea id="message" rows="5" class="form-input" style="width: 100%;"></textarea>
+                        </div>
+                        <button type="submit" class="contact-btn">
+                            Send Message <i class="fas fa-paper-plane "></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="info-container">
+                    <h2 class="text">Our Information</h2>
+                    <div class="grid">
+                        <!-- Contact Card 1 -->
+                         <div class="contact-card3-4" style="display: flex;">
+                                   <div class="contact-card ">
+                            <div class="flet">
+                                 <div class="flee">
+                                <div class="flex-icon">
+                                    <i class="fas fa-map-marker-alt "></i>
+                                </div>
+                                <div>
+                                      <h3 class="text-lg font-bold">Location</h3>
+                                <p class="text-gray-600">Detroit, MI 48201</p>
+
+                                </div>
+                              
+                            </div>
+                            </div>
+                            
+                        </div>
+                        <!-- Contact Card 2 -->
+                        <div class="contact-card">
+                            <div class="flet" style="display: flex;">
+                                <div class="flee">
+                                   <div class="flex-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="flex-content">
+                                 <h3 class="text-lg font-bold">Phone</h3>
+                                  <p class="text-gray-600">Sales: (800) 555-1234</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Contact Card 3 -->
+                
+                 
+                        <!-- Contact Card 3 -->
+                         <div class="contact-card3-4" style="display: flex;">
+                               <div class="contact-card">
+                            <div class="flet">
+                                 <div class="flee">
+                                <div class="flex-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                     <h3 class="text-lg font-bold">Email</h3>
+                                  <p class="text-gray-600">sales@carautomax.com</p>
+
+                                </div>
+                               
+                            </div>
+                            </div>
+                          
+                        </div>
+                        <!-- Contact Card 4 -->
+                        <div class="contact-card">
+                            <div class="flet">
+                                 <div class="flee">
+                                    <div class="flex-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                     <h3 class="text">Hours</h3>
+                                   <p class="text">Mon-Fri: 9AM - 8PM,  <br>Sat: 9AM - 6PM</p>
+                                </div>
+
+                                 </div>
+                                
+                               
+                            </div>
+                         
+                        </div>
+
+                         </div>
+                     
+                    </div>
+                    
+                    <!-- Map -->
+                    <div class="overflow-hidden rounded-lg shadow-lg" style="width: 100%;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d568.5310236653138!2d8.342267771158891!3d4.980126296278971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106787a28d3eb26b%3A0x21c6c5adb9ebc778!2sHappy%20Food!5e0!3m2!1sen!2sng!4v1761215040990!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="faq-item-container">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <h3 class="text-lg font-bold">What financing options do you offer?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p class="p-text" style="color: black;">We work with multiple lenders to provide competitive financing options tailored to your credit situation and budget. Whether you have excellent credit or are rebuilding, we can help you find a solution that works.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <h3 class="text-lg font-bold">Do you offer vehicle warranties?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-content ">
+                        <p class="text">Yes! All new vehicles come with full manufacturer warranties, and our certified pre-owned vehicles include extended warranty coverage. We also offer extended warranty options for all our vehicles.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <h3 class="text-lg font-bold">Can I trade in my current vehicle?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-content ">
+                        <p class="text">Absolutely! We accept trade-ins and will provide you with a competitive offer based on your vehicle's condition, mileage, and market value. You can even get a preliminary estimate online by filling out our trade-in form.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <h3 class="text-lg font-bold">What is your return policy?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-content ">
+                        <p class="text">We offer a 3-day/150-mile money-back guarantee on all vehicles (excluding special orders). If you're not completely satisfied, you can return the vehicle for a full refund within this period.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="call-to-acton">
+        <div class="call-to-acton-container">
+            <h2>Schedule Your Test Drive Today</h2>
+            <p class="text">Experience the vehicle of your choice firsthand with a <br>no-pressure test drive.</p>
+            <a href="tel:+18005551234" class="inline-block">
+                <i class="fas fa-phone-alt"></i> Call Now: (800) 555-1234
+            </a>
+        </div>
+    </section>
+
+    <!--=============== FOOTER ===============-->
+  <footer>
+        <div class="container-footer">
+            <div class="footer-container" style="display: flex;">
+                <div>
+                    <h3 class="footer-logo">
+                        <i class="fas fa-car" style="color: orange;"></i> CARAUTOMAX
+                    </h3>
+                    <p >Your trusted partner for all your automotive <br> needs since 2005.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4 class="font">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="inventory.html">Inventory</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+</ul>
+                </div>
+                <div class="our-services">
+                    <h4 >Our Services</h4>
+                    <ul>
+                        <li><a href="#">Car Sales</a></li>
+                        <li><a href="#">Financing</a></li>
+                        <li><a href="#">Trade-In</a></li>
+                        <li><a href="#">Service Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-contact" >Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt" style="color: orange;"></i>
+
+                            <span class="text-gray-400">123 Auto Lane, Detroit, MI 48201</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt" style="color: orange;"></i>
+
+                            <span class="text-gray-400">(800) 555-1234</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope" style="color: orange;"></i>
+
+                            <span class="text-gray-400">sales@drivemax.com</span>
+                        </li>
+                        <li class="flex items-center" >
+
+                            <i class="fas fa-clock" style="color: orange; font-size: 12px;"></i>
+
+                            <span class="text-gray-400">Mon-Sat: 9AM - 8PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+             <form class="footer-news-letter">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="footer-btn"> <i class="fas fa-paper-plane"></i></button>
+                </form>
+
+            
+            <div class="footer-bottom">
+               
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Stavy-Tech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script>
+        // Mobile menu toggle
+        // document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        //     const menu = document.getElementById('mobile-menu');
+        //     menu.classList.toggle('hidden');
+        // });
+
+        // FAQ toggle functionality
+   document.querySelectorAll('.faq-toggle').forEach(button => {
+    button.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        const icon = this.querySelector('i');
+
+        // Toggle visibility
+        content.classList.toggle('hidden');
+
+        // Toggle icon direction
+        if (content.classList.contains('hidden')) {
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down');
+        } else {
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
+        }
+    });
+});
+
+
+        // Form submission
+        // const form = document.querySelector('form');
+        // if (form) {
+        //     form.addEventListener('submit', function(e) {
+        //         e.preventDefault();
+        //         alert('Thank you for your message! Our team will contact you shortly.');
+        //         form.reset();
+        //     });
+        // }
+
+        // Initialize Feather Icons
+        // feather.replace();
+
+
+//             emailjs.init("vMPoS5H-LDiU0uqxn"); // Replace with your EmailJS public key
+
+
+//     document.addEventListener('DOMContentLoaded', function(){
+//  document.getElementById('form-input-container').addEventListener('submit', function(e){
+
+
+//   e.preventDefault();
+
+//   const contactParams = {
+//         contact_first_name: document.getElementById("first-name").value,
+//         contact_last_name: document.getElementById("last-name").value,
+//         contact_email: document.getElementById("email").value,
+//         contact_phone: document.getElementById("phone").value,
+//         contact_subject: document.getElementById("subject").value,
+//         contact_message: document.getElementById("message").value
+//       };
+
+//       emailjs.send( "service_xlc1q5r", "template_wqkkv16", contactParams)
+//         .then(() => {
+//           alert("✅ your message has been sent successfully! We will get back to You Shortly");
+         
+//         }, (err) => {
+//           alert("❌ Failed to send message. Please try again.");
+//           console.error("EmailJS error:", err);
+//         });
+//     });
+//     });
+
+    
+    </script>
+        
+     <script>
+    emailjs.init("vMPoS5H-LDiU0uqxn"); // Replace with your EmailJS public key
+
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+let form = document.querySelector('.form-input-container');
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const contactParams = {
+        contact_first_name: document.getElementById("first-name").value,
+        contact_last_name: document.getElementById("last-name").value,
+        contact_email: document.getElementById("email").value,
+        contact_phone: document.getElementById("phone").value,
+        contact_subject: document.getElementById("subject").value,
+        contact_message: document.getElementById("message").value,
+        contact_time: document.getElementById("best-time").value
+      };
+
+      emailjs.send( "service_xlc1q5r", "template_wqkkv16", contactParams)
+        .then(() => {
+          alert("✅ your message has been sent successfully! We will get back to You Shortly");
+         
+        }, (err) => {
+          alert("❌ Failed to send message. Please try again.");
+          console.error("EmailJS error:", err);
+        });
+    });
+
+    });
+  
+
+    
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+   

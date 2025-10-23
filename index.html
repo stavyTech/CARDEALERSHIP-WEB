@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FLATICON ===============-->
+    <link rel="stylesheet" href="responsive.css" />
+
+    <!--=============== SWIPER CSS ===============-->
+    <!-- <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" /> -->
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Car Dealer Website</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+  <nav>
+    <a href="index.html" class="nav_logo">
+      <i class="fa-solid fa-car"></i>
+      CarAutoMAx
+    </a>
+    <div class="nav_menu" id="nav-menu">
+      <ul class="nav_list">
+        <li class="nav_item"><a href="index.html" class="nav_link active-link">Home</a></li>
+        <li class="nav_item"><a href="about.html" class="nav_link">About</a></li>
+        <li class="nav_item"><a href="shop.html" class="nav_link">Shop</a></li>
+        <!-- <li class="nav_item"><a href="cart.html" class="nav_link">Cart</a></li> -->
+        <!-- <li class="nav_item"><a href="blog.html" class="nav_link">Blog</a></li> -->
+        <li class="nav_item"><a href="contact.html" class="nav_link">Contact</a></li>
+
+
+
+         <form class="nav_search" id="nav-search" style="display: flex; align-items: center; margin: 1rem 0 0 0; width: 100%; justify-content: center;">
+        <input type="text" placeholder="Search..." class="search_input" id="search-input" style="padding: 0.5rem 1rem; border-radius: 2rem; border: 1px solid #ccc; outline: none; font-size: 1rem; width: 220px; max-width: 100%;" />
+        <button type="submit" class="search_btn" style="background: none; border: none; margin-left: -2.5rem; cursor: pointer;">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+      </ul>
+
+      <div class="nav_btns">
+        <div class="login_toggle" id="login-toggle">
+          <a href="signup.html" class="nav_link"><i class="fa-solid fa-user-plus"></i></a>
+         
+        </div>
+        <div class="nav_shop" id="cart-shop">
+          <i class="fa-solid fa-basket-shopping"></i>
+        </div>
+      </div>
+     
+      <div class="nav_close" id="nav-close" style="display: none;">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="nav_toggle" id="nav-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+</header>
+
+
+    <!-- *************CART***************** -->
+
+      <div class="carts" id="cart">
+      <!-- <i class="bx bx-x cart_close"></i> -->
+       <i class="fa-solid fa-xmark"></i>
+      <h2 class="cart_title-center">My Cart</h2>
+      <div class="cart_container">
+        <article class="cart_card">
+          <div class="cart_box">
+            <img src="assets/img/benz2.avif" alt="">
+          </div>
+
+          <div class="cart_details">
+            <h3 class="cart_title">
+              latest benz </h3>
+              <span class="cart_price"></span>
+
+              <div class="cart_amount">
+                <div class="cart_amount-content">
+                   <span class="cart_amount-box">
+                     <i class="fa-solid fa-minus"></i>
+                   </span>
+
+                   <span class="cart_amount-number">$1k</span>
+                   <span class="cart_amount-box">
+                    <!-- <i class="bx bx-plus"></i> -->
+                     <i class="fa-solid fa-plus"></i>
+                   </span>
+                </div>
+                <!-- <i class="bx bx-trash-alt cart_amount-trash"></i> -->
+                 <i class="fa-solid fa-trash-can"></i>
+              </div>
+
+          </div>
+
+        </article>
+
+         <article class="cart_card">
+          <div class="cart_box">
+            <img src="assets/img/ford1.avif" alt="">
+          </div>
+
+          <div class="cart_details">
+            <h3 class="cart_title">
+              Ford </h3>
+              <span class="cart_price"></span>
+
+              <div class="cart_amount">
+                <div class="cart_amount-content">
+                   <span class="cart_amount-box">
+                    <i class="fa-solid fa-minus"></i>
+                   </span>
+
+                   <span class="cart_amount-number">$90</span>
+                   <span class="cart_amount-box">
+                    <!-- <i class="bx bx-plus"></i> -->
+                     <i class="fa-solid fa-plus"></i>
+                   </span>
+                </div>
+                <!-- <i class="bx bx-trash-alt cart_amount-trash"></i> -->
+                 <i class="fa-solid fa-trash-can"></i>
+              </div>
+
+          </div>
+
+        </article>
+
+
+         <article class="cart_card">
+          <div class="cart_box">
+            <img src="assets/img/toyota1.avif" alt="">
+          </div>
+
+          <div class="cart_details">
+            <h3 class="cart_title">
+              toyota camry </h3>
+              <span class="cart_price"></span>
+
+              <div class="cart_amount">
+                <div class="cart_amount-content">
+                   <span class="cart_amount-box">
+                    <!-- <i class="bx bx-minus"></i> -->
+                     <i class="fa-solid fa-minus"></i>
+                   </span>
+
+                   <span class="cart_amount-number">$2k</span>
+                   <span class="cart_amount-box">
+                    <!-- <i class="bx bx-plus"></i> -->
+                     <i class="fa-solid fa-plus"></i>
+                   </span>
+                </div>
+                <!-- <i class="bx bx-trash-alt cart_amount-trash"></i> -->
+                 <i class="fa-solid fa-trash-can"></i>
+              </div>
+          </div>
+        </article>
+        <div class="cart_prices">
+          <span class="cart_price-items">3 items</span>
+          <span class="cart_price-total">$78</span>
+        </div>
+      </div>
+     </div>
+
+<!-- -----------LOGIN------------- -->
+ <!-- <div class="login show_login" id="login" >
+   <i class="fa-solid fa-xmark login_close" id="login-close"></i>
+   <h2 class="login_title-center">login</h2>
+   <form action="" class="login_form grid" >
+    <div class="login_content" >
+      <label >Email</label>
+      <input type="email" class="login_input">
+    </div>
+    <div class="login_content">
+      <label  class="login_label">Password</label>
+      <input type="password" class="login_input">
+    </div>
+    <div>
+      <a href="" class="button"></a>
+    </div>
+    <div>
+<p class="signup">Not a Member? <a href="login-register.html">signup</a></p>
+    </div>
+   </form>
+
+ </div> -->
+    <!--=============== MAIN ===============-->
+    <main class="main"  id="main1">
+      <!--=============== HOME ===============-->
+      <section class="home container">
+        <div class="swiper home-swiper">
+          <div class="swiper-wrapper">
+            <!-- HOME SWIPER -->
+             <section class="swiper-slide">
+              <div class="home_content ">
+                <div class="home_group">
+                  <img src="assets/img/car-49278_640.webp" alt="" class="home_img">
+                   <div class="home_details-img">
+                    <h4 class="home_details-title">toyota</h4>
+                    <span class="home_details-subtitle">corola</span>
+                  </div>
+
+                  <div class="indicator">
+                    <div class="home_indicator active"></div>
+                    <div class="home_indicator"></div>
+                    <div class="home_indicator"></div>
+                  </div>
+                  
+                 
+                </div>
+
+                <div class="home_data">
+                  <h1 class="home_subtitle">GOOD CARS ARE <br> ALWAYS  INSTOCK </h1>
+                  <h3 class="home_title">#1 TRENDING CAR</h3>
+
+                  <p class="home_description">A  special label creating luxury essentials. ethically
+                    crafted with an unwavery commitement to exceptional quality </p>
+
+                    <div class="home_buttons">
+                      <a href="shop.html" class="button" style="background-color: orange;">Buy Now</a>
+                      <a href="shop.html" class="button button--link ">View Details <i class="fa-solid fa-arrow-right button-icon"></i></a>
+                    </div>
+                </div>
+              </div>
+
+             </section>
+
+               <section class="swiper-slide">
+              <div class="home_content ">
+                <div class="home_group">
+                  <img src="assets/img/car-2208807_640.webp" alt="" class="home_img">
+                   <div class="home_details-img">
+                    <h4 class="home_details-title">Toyota</h4>
+                    <span class="home_details-subtitle">corola</span>
+                  </div>
+
+                  <div class="indicator">
+                    <div class="home_indicator "></div>
+                    <div class="home_indicator active"></div>
+                    <div class="home_indicator"></div>
+                  </div>
+                  
+                 
+                </div>
+
+                <div class="home_data">
+                  <h1 class="home_subtitle">2025 FAIRLY USED CARS </h1>
+                  <h3 class="home_title">FAIRLY USED AND CLEAN CARS</h3>
+                  <p class="home_description">A  special label creating luxury essentials. ethically
+                    crafted with an unwavery commitement to exceptional quality </p>
+
+                    <div class="home_buttons">
+                      <a href="shop.html" class="button" style="background-color: orange;">Buy Now</a>
+                      <a href="shop.html" class="button button--link ">View Details <i class="fa-solid fa-arrow-right button-icon"></i></a>
+                    </div>
+                </div>
+              </div>
+
+             </section>
+
+               <section class="swiper-slide">
+              <div class="home_content ">
+                <div class="home_group">
+                  <img src="assets/img/car12.png" alt="" class="home_img">
+                   <div class="home_details-img">
+                    <h4 class="home_details-title">Mercedes Benz</h4>
+                    <span class="home_details-subtitle">C-Class</span>
+                    <span class="home_details-type">Sedan</span>
+                    <span class="home_details-year">2025</span>
+                    <span class="home_details-price">$30,000</span>
+                  </div>
+
+                  <div class="indicator">
+                    <div class="home_indicator "></div>
+                    <div class="home_indicator"></div>
+                    <div class="home_indicator active"></div>
+                  </div>
+                  
+                 
+                </div>
+
+                <div class="home_data">
+                  <h1 class="home_subtitle">GOOD BRAND NEW CARS <br> FOR HIRE AND LEASING </h1>
+                  <h3 class="home_title">#1 TRENDING CAR</h3>
+
+                  <p class="home_description">A  special label creating luxury essentials. ethically
+                    crafted with an unwavery commitement to exceptional quality </p>
+
+                    <div class="home_buttons">
+                      <a href="shop.html" class="button" style="background-color: orange;">Buy Now</a>
+                      <a href="shop.html" class="button button--link ">View Details <i class="fa-solid fa-arrow-right button-icon"></i></a>
+                    </div>
+                </div>
+              </div>
+
+             </section>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!--=============== CATEGORIES ===============-->
+      
+
+
+
+      <!--=============== PRODUCTS ===============-->
+      <section class="products"></section>
+
+      <!--=============== DEALS ===============-->
+      <section class="deals"></section>
+
+      <!--=============== NEW ARRIVALS ===============-->
+        <h1 class="newh1"    style="display: flex;align-items: center; justify-content: center;">NEW ARRIVALS</h1>
+      <section class="new-arrivals" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; padding: 2rem;">
+      
+  <div class="arrivals-card1">
+    <!-- <img src="assets/img/bmw2.avif" alt="BMW X5"> -->
+    <div class="arrivals-info">
+      <div class="arrivals-title">BMW</div>
+      <div class="arrivals-subtitle">X5</div>
+      <div class="arrivals-year">2022</div>
+      <div class="arrivals-desc">Type: SUV<br>Model: X5<br>Year: 2022<br>Description: Luxury SUV with advanced features and sporty design.</div>
+      <button class="add-cart-btn">Add to cart<i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+  </div>
+  <div class="arrivals-card2">
+    <!-- <img src="assets/img/benz2.avif" alt="Mercedes Benz C-Class"> -->
+    <div class="arrivals-info">
+      <div class="arrivals-title">Mercedes Benz</div>
+      <div class="arrivals-subtitle">C-Class</div>
+      <div class="arrivals-year">2021</div>
+      <div class="arrivals-desc">Type: Sedan<br>Model: C-Class<br>Year: 2021<br>Description: Elegant sedan with premium comfort and safety features.</div>
+      <button class="add-cart-btn">Add to cart<i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+  </div>
+  <div class="arrivals-card3">
+    <!-- <img src="assets/img/toyota1.avif" alt="Toyota Camry"> -->
+    <div class="arrivals-info">
+      <div class="arrivals-title">Toyota</div>
+      <div class="arrivals-subtitle">Camry</div>
+      <div class="arrivals-year">2023</div>
+      <div class="arrivals-desc">Type: Sedan<br>Model: Camry<br>Year: 2023<br>Description: Reliable and fuel-efficient sedan for everyday driving.</div>
+      <button class="add-cart-btn">Add to cart<i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+  </div>
+  <div class="arrivals-card4">
+    <!-- <img src="assets/img/ford1.avif" alt="Ford Mustang"> -->
+    <div class="arrivals-info">
+      <div class="arrivals-title">Ford</div>
+      <div class="arrivals-subtitle">Mustang</div>
+      <div class="arrivals-year">2020</div>
+      <div class="arrivals-desc">Type: Coupe<br>Model: Mustang<br>Year: 2020<br>Description: Iconic sports coupe with powerful performance.</div>
+      <div class="cartsbtn">
+  <!-- <button class="add-cart-btn">Test Drive<i class="fa-solid fa-car"></i></button> -->
+      <button class="add-cart-btn">Add to cart<i class="fa-solid fa-basket-shopping"></i></button>
+      </div>
+    
+    </div>
+  </div>
+  <!-- <div class="arrivals-card">
+    <img src="assets/img/lexus1.avif" alt="Lexus RX">
+    <div class="arrivals-info">
+      <div class="arrivals-title">Lexus</div>
+      <div class="arrivals-subtitle">RX</div>
+      <div class="arrivals-year">2022</div>
+      <div class="arrivals-desc">Type: SUV<br>Model: RX<br>Year: 2022<br>Description: Premium SUV with advanced safety and comfort features.</div>
+      <button class="add-cart-btn">Add to cart<i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+  </div> -->
+ 
+  <!-- <div class="arrivals-card">
+    <img src="assets/img/volvo.avif" alt="Volvo XC90">
+    <div class="arrivals-info">
+      <div class="arrivals-title">Volvo</div>
+      <div class="arrivals-subtitle">XC90</div>
+      <div class="arrivals-year">2023</div>
+      <div class="arrivals-desc">Type: SUV<br>Model: XC90<br>Year: 2023<br>Description: Spacious luxury SUV with innovative technology.</div>
+      <button class="add-cart-btn">Add to cart<i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+  </div> -->
+  <!-- <div class="arrivals-card">
+    <img src="assets/img/volvo.avif" alt="Volvo XC90">
+    <div class="arrivals-info">
+      <div class="arrivals-title">Volvo</div>
+      <div class="arrivals-subtitle">XC90</div>
+      <div class="arrivals-year">2023</div>
+      <div class="arrivals-desc">Type: SUV<br>Model: XC90<br>Year: 2023<br>Description: Spacious luxury SUV with innovative technology.</div>
+      <button class="add-cart-btn">Add to cart<i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+  </div> -->
+ <a href="shop.html" style="padding: 20px;background-color: #f88e03;color: white; border-radius: 0.5rem; text-decoration: none;" > View Full Gallery<i class="fa-solid fa-arrow-right"></i></a>
+
+</section>
+
+      <!--=============== SHOWCASE ===============-->
+      <section class="showcase">
+        
+
+      </section>
+
+      <!-- End SHOWCASE -->
+
+      <!-- WHY CHOOSE US -->
+      <section class="why-choose-us">
+        <h2>Why Choose Us?</h2>
+        <div class="why-choose-us-content">
+          <div class="why-choose-us-item">
+            <i class="fa-solid fa-car" style="color: orange;"></i>
+            <h3>Wide Selection</h3>
+            <p>We offer a wide range of vehicles to suit every need and budget.</p>
+          </div>
+          <div class="why-choose-us-item">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <h3>Quality Assurance</h3>
+            <p>All our cars undergo rigorous inspections to ensure quality and reliability.</p>
+          </div>
+          <div class="why-choose-us-item">
+            <i class="fa-solid fa-dollar-sign"></i>
+            <h3>Competitive Pricing</h3>
+            <p>We provide the best prices in the market without compromising on quality.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- TESTIMONIALS -->
+      <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonials-content">
+          <div class="testimonial-item">
+            <img src="assets/img/avatar-1.jpg" alt="User 1">
+             <div class="star">
+              <i class="fa-solid fa-star" style="color: gold"></i>
+            <i class="fa-solid fa-star" style="color: gold"></i>
+            <i class="fa-solid fa-star" style="color: gold"></i>
+            <i class="fa-solid fa-star" style="color: gold"></i>
+            <i class="fa-solid fa-star" style="color: gold"></i>
+            </div>
+            <p>"Great experience! The staff was friendly and helped me find the perfect car."</p>
+            <h3>- John D.</h3>
+          </div>
+          <div class="testimonial-item">
+            <img src="assets/img/avatar-2.jpg" alt="User 1">
+             <div class="star">
+              <i class="fa-solid fa-star" style="color: gold"></i>
+            <i class="fa-solid fa-star" style="color: gold"></i>
+            <i class="fa-solid fa-star" style="color: gold"></i>
+            <i class="fa-solid fa-star" style="color: gold"></i>
+            <i class="fa-solid fa-star" style="color: gold"></i>
+            </div>
+            <p>"I love my new car! The quality and service were top-notch."</p>
+            <h3>- Sarah K.</h3>
+          </div>
+          <div class="testimonial-item">
+            <img src="assets/img/avatar-3.jpg" alt="User 1">
+            <div class="star">
+              <i class="fa-solid fa-star" style="color: gold"></i>
+            <i class="fa-solid fa-star" style="color: gold"></i>
+            <i class="fa-solid fa-star" style="color: gold"></i>
+            <i class="fa-solid fa-star" style="color: gold"></i>
+            <i class="fa-solid fa-star" style="color: gold"></i>
+            </div>
+            <p>"Highly recommend this dealership. They made the buying process easy and stress-free."</p>
+            <h3>- Mike S.</h3>
+          </div>
+        </div>
+
+      <!--=============== NEWSLETTER ===============-->
+      <section class="news-letter">
+        <h2 class="news-letter">Subscribe to Our Newsletter</h2>
+        <p>Get the latest updates on new arrivals and special offers.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button class="news-btn" type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+  <footer>
+        <div class="container-footer">
+            <div class="footer-container" style="display: flex;">
+                <div>
+                    <h3 class="footer-logo">
+                        <i class="fas fa-car" style="color: orange;"></i> CARAUTOMAX
+                    </h3>
+                    <p >Your trusted partner for all your automotive <br> needs since 2005.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4 class="font">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="inventory.html">Inventory</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+</ul>
+                </div>
+                <div class="our-services">
+                    <h4 >Our Services</h4>
+                    <ul>
+                        <li><a href="#">Car Sales</a></li>
+                        <li><a href="#">Financing</a></li>
+                        <li><a href="#">Trade-In</a></li>
+                        <li><a href="#">Service Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-contact" >Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt" style="color: orange;"></i>
+
+                            <span class="text-gray-400">123 Auto Lane, Detroit, MI 48201</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt" style="color: orange;"></i>
+
+                            <span class="text-gray-400">(800) 555-1234</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope" style="color: orange;"></i>
+
+                            <span class="text-gray-400">sales@drivemax.com</span>
+                        </li>
+                        <li class="flex items-center" >
+
+                            <i class="fas fa-clock" style="color: orange; font-size: 12px;"></i>
+
+                            <span class="text-gray-400">Mon-Sat: 9AM - 8PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+             <form class="footer-news-letter">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="footer-btn"> <i class="fas fa-paper-plane"></i></button>
+                </form>
+
+            
+            <div class="footer-bottom">
+               
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Stavy-Tech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+  
+
+<!-- <script> -->
+<!-- // Responsive footer: stack columns on mobile -->
+
+<!-- </script> -->
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/main.js" defer></script>
+    <!-- <script /src="array.js"></script> -->
+
+    <!--=============== MAIN JS ===============-->
+    <script src=""></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchForm = document.getElementById('nav-search');
+  const searchInput = document.getElementById('search-input');
+  if (searchForm) {
+    searchForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const query = searchInput.value.trim();
+      if (query) {
+        // For demo: alert, replace with actual search logic
+        alert('Searching for: ' + query);
+      }
+    });
+  }
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navMenu = document.getElementById('nav-menu');
+  const navToggle = document.getElementById('nav-toggle');
+  const navClose = document.getElementById('nav-close');
+  const navLinks = document.querySelectorAll('.nav_link');
+
+  // Show menu
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.add('show-menu');
+      navClose.style.display = 'block';
+    });
+  }
+
+  // Hide menu
+  if (navClose) {
+    navClose.addEventListener('click', () => {
+      navMenu.classList.remove('show-menu');
+      navClose.style.display = 'none';
+    });
+  }
+
+  // Hide menu on link click (for mobile)
+  navLinks.forEach(link =>
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('show-menu');
+      navClose.style.display = 'none';
+    })
+  );
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout | CarAutoMax</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background: #222; color: #fff; }
+    .checkout-summary { margin-top: 2rem; font-size: 1.2rem; }
+    .checkout-btn { background: orange; border: none; padding: 1rem 2rem; cursor: pointer; font-size: 1rem; color: white; border-radius: 6px; }
+    .checkout-btn:hover { background: darkorange; }
+  </style>
+</head>
+<body>
+  <h1>Your Cart</h1>
+  <table id="cart-table">
+    <thead>
+      <tr>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Remove</th>
+        <th>add</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="checkout-summary">
+    <p><strong>Total Items:</strong> <span id="total-items">0</span></p>
+  </div>
+
+  <button class="checkout-btn" id="checkout-btn">Proceed to Payment</button>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tableBody = document.querySelector("#cart-table tbody");
+      const totalItemsEl = document.getElementById("total-items");
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      function renderCart() {
+        tableBody.innerHTML = "";
+        if (cart.length === 0) {
+          tableBody.innerHTML = "<tr><td colspan='6'>Your cart is empty.</td></tr>";
+          totalItemsEl.textContent = "0";
+          return;
+        }
+
+        cart.forEach((item, index) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${item.brand}</td>
+            <td>${item.model}</td>
+            <td>${item.year}</td>
+            <td>${item.description}</td>
+            <td>${item.quantity}</td>
+            <td><button class="remove-btn" data-index="${index}">🗑️</button></td>
+          `;
+          tableBody.appendChild(row);
+        });
+
+        totalItemsEl.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+        // Add remove functionality
+        document.querySelectorAll(".remove-btn").forEach(btn => {
+          btn.addEventListener("click", (e) => {
+            const i = e.target.getAttribute("data-index");
+            cart.splice(i, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCart();
+          });
+        });
+      }
+
+      renderCart();
+
+      // Checkout button logic
+      document.getElementById("checkout-btn").addEventListener("click", () => {
+        if (cart.length === 0) {
+          alert("Your cart is empty!");
+          return;
+        }
+        alert("Thank you for your purchase! Proceeding to payment...");
+        localStorage.removeItem("cart"); // clear cart after checkout
+        window.location.href = "payment.html"; // optional next step
+      });
+    });
+  </script>
+</body>
+</html>
