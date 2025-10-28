@@ -81,67 +81,67 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //     emailjs.init("vgZYuF3Jig065QDAq"); // Replace with your EmailJS public key
 
- let cart = [];
+//  let cart = [];
 
-    function toggleCart() {
-    document.getElementById("cart-sidebar").classList.toggle("active");
-}
+//     function toggleCart() {
+//     document.getElementById("cart-sidebar").classList.toggle("active");
+// }
 
-    function addToCart(name, price) {
-      let item = cart.find(i => i.name === name);
-      if (item) {
-        item.quantity++;
-      } else {
-        cart.push({ name, price, quantity: 1 });
-      }
-      renderCart();
-    }
+//     function addToCart(name, price) {
+//       let item = cart.find(i => i.name === name);
+//       if (item) {
+//         item.quantity++;
+//       } else {
+//         cart.push({ name, price, quantity: 1 });
+//       }
+//       renderCart();
+//     }
 
-    function removeItem(index) {
-      cart.splice(index, 1);
-      renderCart();
-    }
+//     function removeItem(index) {
+//       cart.splice(index, 1);
+//       renderCart();
+//     }
 
-    function updateQuantity(index, change) {
-      cart[index].quantity += change;
-      if (cart[index].quantity <= 0) {
-        cart.splice(index, 1);
-      }
-      renderCart();
-    }
+//     function updateQuantity(index, change) {
+//       cart[index].quantity += change;
+//       if (cart[index].quantity <= 0) {
+//         cart.splice(index, 1);
+//       }
+//       renderCart();
+//     }
 
-    function renderCart() {
-      let cartItems = document.getElementById("cart-items");
-      let cartTotal = document.getElementById("cart-total");
-      let orderSummary = document.getElementById("order-summary");
-      let cartCount = document.getElementById("cart-count");
-      let total = 0, count = 0;
+//     function renderCart() {
+//       let cartItems = document.getElementById("cart-items");
+//       let cartTotal = document.getElementById("cart-total");
+//       let orderSummary = document.getElementById("order-summary");
+//       let cartCount = document.getElementById("cart-count");
+//       let total = 0, count = 0;
 
-      cartItems.innerHTML = "";
-      orderSummary.innerHTML = "";
+//       cartItems.innerHTML = "";
+//       orderSummary.innerHTML = "";
 
-      cart.forEach((item, index) => {
-        let itemTotal = item.price * item.quantity;
-        total += itemTotal;
-        count += item.quantity;
-        cartItems.innerHTML += `
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <span>${item.name}</span>
-            <div>
-              <button class="btn btn-sm btn-secondary" onclick="updateQuantity(${index}, -1)">-</button>
-              <span class="mx-2">${item.quantity}</span>
-              <button class="btn btn-sm btn-secondary" onclick="updateQuantity(${index}, 1)">+</button>
-            </div>
-            <span>$${itemTotal.toFixed(2)}</span>
-            <button class="btn btn-sm btn-danger" onclick="removeItem(${index})">❌</button>
-          </div>
-        `;
-        orderSummary.innerHTML += `<li class="list-group-item">${item.name} x${item.quantity} - $${itemTotal.toFixed(2)}</li>`;
-      });
+//       cart.forEach((item, index) => {
+//         let itemTotal = item.price * item.quantity;
+//         total += itemTotal;
+//         count += item.quantity;
+//         cartItems.innerHTML += `
+//           <div class="d-flex justify-content-between align-items-center mb-2">
+//             <span>${item.name}</span>
+//             <div>
+//               <button class="btn btn-sm btn-secondary" onclick="updateQuantity(${index}, -1)">-</button>
+//               <span class="mx-2">${item.quantity}</span>
+//               <button class="btn btn-sm btn-secondary" onclick="updateQuantity(${index}, 1)">+</button>
+//             </div>
+//             <span>$${itemTotal.toFixed(2)}</span>
+//             <button class="btn btn-sm btn-danger" onclick="removeItem(${index})">❌</button>
+//           </div>
+//         `;
+//         orderSummary.innerHTML += `<li class="list-group-item">${item.name} x${item.quantity} - $${itemTotal.toFixed(2)}</li>`;
+//       });
 
-      cartTotal.textContent = "$" + total.toFixed(2);
-      cartCount.textContent = count;
-    }
+//       cartTotal.textContent = "$" + total.toFixed(2);
+//       cartCount.textContent = count;
+//     }
 
     // document.getElementById("checkout-form").addEventListener("submit", function(e) {
     //   e.preventDefault();

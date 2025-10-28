@@ -9,7 +9,7 @@ const carData = [
 
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("search-input");
-  const resultsContainer = document.querySelector(".new-arrivals"); // where cars are displayed
+  const resultsContainer = document.querySelector(".space"); // where cars are displayed
 
   // Function to render cars to the page
   function displayCars(cars) {
@@ -22,14 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cars.forEach(car => {
       const card = document.createElement("div");
-      card.classList.add("arrivals-card");
+      
       card.innerHTML = `
-        <div class="arrivals-info">
+        <div>
           <div class="arrivals-title">${car.brand}</div>
           <div class="arrivals-subtitle">${car.model}</div>
           <div class="arrivals-year">${car.year}</div>
-          <div class="arrivals-desc">${car.description}</div>
-          <button class="add-cart-btn">Add to cart <i class="fa-solid fa-basket-shopping"></i></button>
+       
+          
         </div>
       `;
       resultsContainer.appendChild(card);
@@ -41,13 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Search logic
   searchInput.addEventListener("input", () => {
+    const space = document.querySelector(".space");
     const query = searchInput.value.toLowerCase();
     const filteredCars = carData.filter(car =>
       car.brand.toLowerCase().includes(query) ||
       car.model.toLowerCase().includes(query) ||
       car.year.toString().includes(query)
     );
-
-    displayCars(filteredCars);
+    space.style.display = "block"
+ displayCars(filteredCars)
   });
 });
