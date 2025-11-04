@@ -15,6 +15,7 @@
 
     <title>Car Dealer Website</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   </head>
   <body>
     <!--=============== HEADER ===============-->
@@ -43,7 +44,7 @@
             <div class="login_toggle" id="login-toggle">
               <a href="signup.html" class="nav_link"><i class="fa-solid fa-user-plus"></i></a>
             </div>
-            <button onclick="toggleCart()" style="background-color: orange; color: white; padding: 10px; border-radius: 10px; width: 150px;">
+            <button onclick="toggleCart()" style="background-color: orange; color: white; padding: 10px; width: 200px; height: 50px;">
               🛒 Cart <span id="cart-count">0</span>
             </button>
           </div>
@@ -115,10 +116,103 @@
     <!--=============== MAIN ===============-->
     <main class="main" id="main1">
       <!-- Your existing content here -->
+
+       <section class="home container">
+        <div class="swiper home-swiper">
+          <div class="swiper-wrapper">
+            <!-- HOME SWIPPER -->
+             <section class="swiper-slide">
+              <div class="home_content grid">
+                <div class="home_group">
+                  <img src="assets/img/car-49278_640.webp" alt="">
+                  <div class="home_indicator"> </div>
+                  <div class="home_details-img">
+                    <h4 class="home_details-title">#1 VENZA</h4>
+                    <span class="home_details-subtitle">BENZ</span>
+                  </div>
+                </div>
+                <div class="home_data">
+                  <h3 class=".home_subtitle">#1 TRENDING CARS</h3>
+                  <h1 class="home_title">BRAND <br> NEW IS NEVER <br> FINISHED</h1>
+                  <p class="home_discription">this is a place of hope , learning and purpose. visite and become a part of somethingbiger a movevment that is changing lives.</p>
+
+                  <div class="home_buttons">
+                    <a href="shop.html" class="button">Buy Now</a>
+                    <a href="shop.html" class="button button--link">View More <i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+             </section>
+             <!-- HOME SWIPPER -->
+             <section class="swiper-slide">
+              <div class="home_content grid">
+                <div class="home_group">
+                  <img src="assets/img/car22.jpg" alt="">
+                  <div class="home_indicator"> </div>
+                  <div class="home_details-img">
+                    <h4 class="home_details-title">HIGHLANDER</h4>
+                    <span class="home_details-subtitle">CAMRY</span>
+                  </div>
+                </div>
+                <div class="home_data">
+                  <h3 class=".home_subtitle">#2 TRENDING CARS</h3>
+                  <h1 class="home_title">BRAND <br> NEW IS NEVER <br> FINISHED</h1>
+                  <p class="home_discription">this is a place of hope , learning and purpose. visite and become a part of somethingbiger a movevment that is changing lives.</p>
+
+                  <div class="home_buttons">
+                    <a href="shop.html" class="button">Buy Now</a>
+                    <a href="shop.html" class="button button--link">View More <i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+             </section>
+
+             <!-- HOME SWIPPER -->
+             <section class="swiper-slide">
+              <div class="home_content grid">
+                <div class="home_group">
+                  <img src="assets/img/toyota-suv1.jpg" alt="">
+                  <div class="home_indicator"> </div>
+                  <div class="home_details-img">
+                    <h4 class="home_details-title">TOYOTA SUV</h4>
+                    <span class="home_details-subtitle">BENZ</span>
+                  </div>
+                </div>
+                <div class="home_data">
+                  <h3 class=".home_subtitle">#3 TRENDING CARS</h3>
+                  <h1 class="home_title">BRAND <br> NEW IS NEVER <br> FINISHED</h1>
+                  <p class="home_discription">this is a place of hope , learning and purpose. visite and become a part of somethingbiger a movevment that is changing lives.</p>
+
+                  <div class="home_buttons">
+                    <a href="shop.html" class="button">Buy Now</a>
+                    <a href="shop.html" class="button button--link">View More <i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+             </section>
+
+          </div>
+
+        </div>
+
+       </section>
+       
       <!-- ... -->
       
       <!-- NEW ARRIVALS SECTION -->
-      <h1 class="newh1" style="display: flex;align-items: center; justify-content: center;">NEW ARRIVALS</h1>
+      <h1 class="newh1" style="display: flex;align-items: center; justify-content: center; padding-top: 90px;">NEW ARRIVALS</h1>
       <section class="new-arrivals" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; padding: 2rem;">
         <div class="arrivals-card1">
           <div class="arrivals-info">
@@ -314,9 +408,11 @@
                 </div>
             </div>
              <form class="footer-news-letter">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit" class="footer-btn"> <i class="fas fa-paper-plane"></i></button>
-                </form>
+    <input type="email" id="emailInput" placeholder="Enter your email" required>
+    <button type="submit" class="footer-btn">
+        <i class="fas fa-paper-plane"></i>
+    </button>
+</form>
 
             
             <div class="footer-bottom">
@@ -389,6 +485,27 @@ document.addEventListener('DOMContentLoaded', function() {
   );
 });
 </script>
+
+
+<!-- <script>
+    // Select the form element
+    const form = document.querySelector('.footer-news-letter');
+
+    // Add an event listener to handle the form submission
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the page from reloading
+
+        const email = document.getElementById('emailInput').value.trim();
+
+        if (email) {
+            alert('Subscription successful!');
+            form.reset(); // Clear the input field after success
+        } else {
+            alert('Please enter a valid email address.');
+        }
+    });
+
+  </script> -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>

@@ -19,50 +19,45 @@
 </head>
 <body>
     <!-- Navigation -->
-    <header class="header" id="header">
-  <nav>
-    <a href="index.html" class="nav_logo">
-      <i class="fa-solid fa-car"></i>
-      CarAutoMAx
-    </a>
-    <div class="nav_menu" id="nav-menu">
-      <ul class="nav_list">
-        <li class="nav_item"><a href="index.html" class="nav_link active-link">Home</a></li>
-        <li class="nav_item"><a href="about.html" class="nav_link">About</a></li>
-        <li class="nav_item"><a href="shop.html" class="nav_link">Shop</a></li>
-        <!-- <li class="nav_item"><a href="cart.html" class="nav_link">Cart</a></li> -->
-        <!-- <li class="nav_item"><a href="blog.html" class="nav_link">Blog</a></li> -->
-        <li class="nav_item"><a href="contact.html" class="nav_link">Contact</a></li>
+     <header class="header" id="header">
+        <nav>
+        <a href="index.html" class="nav_logo">
+          <i class="fa-solid fa-car"></i>
+          CarAutoMAx
+        </a>
+        <div class="nav_menu" id="nav-menu">
+          <ul class="nav_list">
+            <li class="nav_item"><a href="index.html" class="nav_link active-link">Home</a></li>
+            <li class="nav_item"><a href="about.html" class="nav_link">About</a></li>
+            <li class="nav_item"><a href="shop.html" class="nav_link">Shop</a></li>
+            <li class="nav_item"><a href="contact.html" class="nav_link">Contact</a></li>
 
+            <form class="nav_search" id="nav-search" style="display: flex; align-items: center; margin: 1rem 0 0 0; width: 100%; justify-content: center;">
+              <input type="text" placeholder="Search..." class="search_input" id="search-input" style="padding: 0.5rem 1rem; border-radius: 2rem; border: 1px solid #ccc; outline: none; font-size: 1rem; width: 220px; max-width: 100%;" />
+              <button type="submit" class="search_btn" style="background: none; border: none; margin-left: -2.5rem; cursor: pointer;">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </ul>
 
-
-         <form class="nav_search" id="nav-search" style="display: flex; align-items: center; margin: 1rem 0 0 0; width: 100%; justify-content: center;">
-        <input type="text" placeholder="Search..." class="search_input" id="search-input" style="padding: 0.5rem 1rem; border-radius: 2rem; border: 1px solid #ccc; outline: none; font-size: 1rem; width: 220px; max-width: 100%;" />
-        <button type="submit" class="search_btn" style="background: none; border: none; margin-left: -2.5rem; cursor: pointer;">
-          <i class="fa fa-search"></i>
-        </button>
-      </form>
-      </ul>
-
-      <div class="nav_btns">
-        <div class="login_toggle" id="login-toggle">
-          <a href="signup.html" class="nav_link"><i class="fa-solid fa-user-plus"></i></a>
+          <div class="nav_btns">
+            <div class="login_toggle" id="login-toggle">
+              <a href="signup.html" class="nav_link"><i class="fa-solid fa-user-plus"></i></a>
+            </div>
+            <button onclick="toggleCart()" style="background-color: orange; color: white; padding: 10px; width: 200px; height: 50px;">
+              🛒 Cart <span id="cart-count">0</span>
+            </button>
+          </div>
          
+          <div class="nav_close" id="nav-close" style="display: none;">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
         </div>
-        <div class="nav_shop" id="cart-shop">
-          <i class="fa-solid fa-basket-shopping"></i>
+        <div class="nav_toggle" id="nav-toggle">
+          <i class="fa-solid fa-bars"></i>
         </div>
-      </div>
-     
-      <div class="nav_close" id="nav-close" style="display: none;">
-        <i class="fa-solid fa-xmark"></i>
-      </div>
-    </div>
-    <div class="nav_toggle" id="nav-toggle">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-  </nav>
-</header>
+      </nav>
+    </header>
 
     <!-- Contact Section -->
     <section class="contact-section">
