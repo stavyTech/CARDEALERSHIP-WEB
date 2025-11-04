@@ -806,6 +806,27 @@ font-size: var(--small-font-size);
 }
 
 
+.swiper-pagination{
+  position: initial;
+  margin-top: var(--mb-2-5);
+
+}
+
+.swiper-pagination-bullet{
+  width: 5px;
+  height: 5px;
+  background: var(--title-color);
+  opacity: 1;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  margin: 0.5rem;
+}
+.swiper-pagination-bullet-active{
+  width: 1.5rem;
+  height: 5px;
+  border-radius: .5rem;
+}
 
  .about-hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
