@@ -33,6 +33,16 @@ document.addEventListener('DOMContentLoaded', function() {
   );
 });
 
+// ///////////SWIPPER////////////////////////////
+
+// var homeSwiper = new Swper(".home-swiper",{
+//   spaceBetween:30,
+//   loop:'true',
+//   pagination:{
+//     el: ".swiper-pagination",
+//   },
+// });
+
 
 // FILTER BUTTON/////////
 
