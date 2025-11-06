@@ -122,22 +122,22 @@
     }
 
    .home_buttons{
-       width: 10%;
-       background-color: red;
+       width: 70%;
+       /* background-color: red; */
        font-size: 12px; 
-        /* padding: 5px;  */
+        padding: 15px; 
         display: flex; 
-        flex-direction: column;
-        /* justify-content: space-around;  */
+        /* flex-direction: column; */
+        justify-content: space-around; 
          align-items: center; 
     } 
    .button--link, .button,
     .button-icon{
-        background-color: blue; 
-        width: 20%;
-        height: 20px;
-        font-size: 12px;
-        padding: 5px;
+        /* background-color: blue;  */
+        width: 40%;
+        height: 50px;
+        font-size: 20px;
+        padding: 25px;
     } 
     .button--link{
         padding: 1px;
@@ -265,13 +265,14 @@
 
 @media screen and (max-width: 768px) {
   .new__arrivals {
+    display: flex;
     flex-direction: column !important;
     gap: 1.5rem !important;
     align-items: center !important;
     width: 100% !important;
   }
   .arrival_card {
-    width: 95vw !important;
+    width: 100vw !important;
     min-height: 320px !important;
     margin-bottom: 1.5rem !important;
   }
