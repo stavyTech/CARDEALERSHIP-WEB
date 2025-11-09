@@ -227,6 +227,53 @@ nav {
         top: 1rem;
         right: 1rem;
     }
+/* Small-screen (phones) — show two cards per row and reduce size */
+@media screen and (max-width: 480px) {
+  /* Ensure container uses flex wrap */
+  .new-arrivals, .new__arrivals {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    padding: 12px !important;
+    justify-content: space-between !important;
+  }
+
+  /* Target different card class names used across pages */
+  .arrivals-card, .arrivals-card1, .arrivals-card2, .arrivals-card3, .arrivals-card4,
+  .arrival_card, .arrival-card {
+    box-sizing: border-box;
+    width: calc(50% - 8px) !important;
+    max-width: calc(50% - 8px) !important;
+    min-height: 160px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Reduce image height so two cards fit vertically */
+  .arrivals-card img, .arrival_card img, .arrival-card img {
+    width: 100% !important;
+    height: 110px !important;
+    object-fit: cover !important;
+    display: block;
+  }
+
+  .arrivals-info, .arrival_card .arrivals-info, .arrival-card .arrivals-info {
+    padding: 8px !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* Make add-to-cart / buttons smaller */
+  .add-cart-btn, .add-cart-btn i, .arrivals-info button {
+    font-size: 0.9rem !important;
+    padding: 8px 10px !important;
+  }
+
+  /* If there are .car-card variants */
+  .car-card {
+    width: calc(50% - 8px) !important;
+    margin: 4px !important;
+  }
+}
 
     .nav_list {
         flex-direction: column;
@@ -428,7 +475,7 @@ nav {
     }
 
     .nav_btns button {
-        width: 100% ;
+        width: 100% !important;
     }
 
     /* Show Menu */
