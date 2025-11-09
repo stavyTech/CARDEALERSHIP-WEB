@@ -1,7 +1,50 @@
 /*=============== SHOW MENU ===============*/
+document.addEventListener('DOMContentLoaded', () => {
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
+    const navLinks = document.querySelectorAll('.nav_link');
 
-/*===== Menu Show =====*/
-/* Validate if constant exists */
+    function showMenu() {
+        if (navMenu) {
+            navMenu.classList.add('show-menu');
+            if (navClose) {
+                navClose.style.display = 'block';
+            }
+        }
+    }
+
+    function hideMenu() {
+        if (navMenu) {
+            navMenu.classList.remove('show-menu');
+            if (navClose) {
+                navClose.style.display = 'none';
+            }
+        }
+    }
+
+    // Show menu
+    if (navToggle) {
+        navToggle.addEventListener('click', showMenu);
+    }
+
+    // Hide menu
+    if (navClose) {
+        navClose.addEventListener('click', hideMenu);
+    }
+
+    // Hide menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navMenu && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+            hideMenu();
+        }
+    });
+
+    // Hide menu when clicking a nav link
+    navLinks.forEach(link => {
+        link.addEventListener('click', hideMenu);
+    });
+});
 
 // Responsive Navbar Toggle
 
