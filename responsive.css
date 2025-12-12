@@ -227,51 +227,51 @@ nav {
         top: 1rem;
         right: 1rem;
     }
-/* Small-screen (phones) — show two cards per row and reduce size */
+/* Small-screen (phones) — show ONE card per row */
 @media screen and (max-width: 480px) {
   /* Ensure container uses flex wrap */
   .new-arrivals, .new__arrivals {
     display: flex !important;
     flex-wrap: wrap !important;
-    gap: 8px !important;
-    padding: 12px !important;
-    justify-content: space-between !important;
+    gap: 1rem !important;
+    padding: 1rem !important;
+    justify-content: center !important;
   }
 
-  /* Target different card class names used across pages */
+  /* Target different card class names - ONE per row */
   .arrivals-card, .arrivals-card1, .arrivals-card2, .arrivals-card3, .arrivals-card4,
   .arrival_card, .arrival-card {
     box-sizing: border-box;
-    width: calc(50% - 8px) !important;
-    max-width: calc(50% - 8px) !important;
-    min-height: 160px !important;
+    width: 90vw !important;
+    max-width: 90vw !important;
+    min-height: 320px !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  /* Reduce image height so two cards fit vertically */
+  /* Reduce image height */
   .arrivals-card img, .arrival_card img, .arrival-card img {
     width: 100% !important;
-    height: 110px !important;
+    height: 200px !important;
     object-fit: cover !important;
     display: block;
   }
 
   .arrivals-info, .arrival_card .arrivals-info, .arrival-card .arrivals-info {
-    padding: 8px !important;
-    font-size: 0.9rem !important;
+    padding: 1rem !important;
+    font-size: 1rem !important;
   }
 
-  /* Make add-to-cart / buttons smaller */
+  /* Make add-to-cart buttons properly sized */
   .add-cart-btn, .add-cart-btn i, .arrivals-info button {
-    font-size: 0.9rem !important;
-    padding: 8px 10px !important;
+    font-size: 1rem !important;
+    padding: 10px 15px !important;
   }
 
-  /* If there are .car-card variants */
+  /* Car card variants */
   .car-card {
-    width: calc(50% - 8px) !important;
-    margin: 4px !important;
+    width: 90vw !important;
+    margin: 0.5rem auto !important;
   }
 }
 
@@ -934,62 +934,83 @@ nav {
   .home_content {
     flex-direction: column;
     text-align: center;
-    gap: 2rem;
-    padding-top: 4rem;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    padding-top: 5rem;
   }
 
-  .home_group,
+  .home_group {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .home_data {
     width: 100%;
     text-align: center;
-    align-items: center;
+    padding: 0 1rem;
   }
 
   .home_img {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
     height: auto;
-    margin: 0 auto;
+    object-fit: contain;
+    margin: 0 auto 1rem;
   }
 
   .home_subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .home_title {
-    font-size: 2rem;
-    line-height: 1.2;
+    font-size: 1.5rem;
+    line-height: 1.3;
     margin-bottom: 1rem;
+    font-weight: 600;
   }
 
   .home_description {
-    font-size: 1rem;
-    padding: 0 1rem;
-    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
   }
 
   .home_buttons {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.8rem;
     justify-content: center;
     align-items: center;
-    padding: 0 1rem;
+    padding: 0;
+    width: 100%;
+  }
+
+  .home_buttons a,
+  .home_buttons button {
+    width: 100%;
+    max-width: 250px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
   }
 
   .home_details-img {
     position: relative;
-    margin-top: 2rem;
+    width: 100%;
+    margin-top: 0;
   }
 
   .home_indicator {
     position: static !important;
-    margin: 1.5rem auto 0 auto !important;
-    width: 100% !important;
-    height: 20px !important;
+    margin: 1rem auto 0 auto !important;
+    width: auto !important;
+    height: auto !important;
     display: flex !important;
-    gap: 1rem !important;
+    gap: 0.5rem !important;
     align-items: center !important;
     justify-content: center !important;
     order: 2 !important;
@@ -1018,26 +1039,26 @@ nav {
         min-height: 320px;
       }
       .arrivals-card img {
-        height: 160px;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
       }
       .arrivals-card .arrivals-info {
-        font-size: 0.95rem;
-        padding: 0.8rem;
+        font-size: 1rem;
+        padding: 1rem;
         opacity: 1;
-        /* position: static; */
         background: rgba(0,0,0,0.08);
         color: #222;
         border-radius: 0 0 1rem 1rem;
         transition: none;
-        display: flex;
-        justify-content: start;
-        /* flex-direction: column; */
+        display: block;
         align-items: start;
       }
       .arrivals-card .add-cart-btn {
-        width: 90%;
-        font-size: 0.95rem;
-        margin-top: 0.8rem;
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+        margin-top: 0.5rem;
       }
     }
 
